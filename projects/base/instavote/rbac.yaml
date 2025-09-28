@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    toolkit.fluxcd.io/tenant: facebooc
+    toolkit.fluxcd.io/tenant: instavote
   name: instavote
 ---
 apiVersion: v1
