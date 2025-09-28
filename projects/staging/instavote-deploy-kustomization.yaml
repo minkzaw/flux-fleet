@@ -6,3 +6,4 @@ metadata:
   namespace: instavote
 spec:
   path: ./flux/staging
+

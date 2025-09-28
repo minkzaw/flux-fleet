@@ -5,22 +5,11 @@ metadata:
   name: instavote-deploy
   namespace: instavote
 spec:
-  healthChecks:
-  - kind: Deployment
-    name: vote
-    namespace: instavote
-  - kind: Deployment
-    name: result
-    namespace: instavote
-  - kind: Deployment
-    name: worker
-    namespace: instavote
   interval: 1m0s
   path: ./flux
-  prune: true
+  prune: false
   serviceAccountName: instavote
   targetNamespace: instavote
-  timeout: 3m0s
   sourceRef:
     kind: GitRepository
     name: instavote-deploy
