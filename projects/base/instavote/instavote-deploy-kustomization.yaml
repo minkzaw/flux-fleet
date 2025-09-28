@@ -21,7 +21,6 @@ spec:
   serviceAccountName: instavote
   targetNamespace: instavote
   timeout: 3m0s
-  validation: client
   sourceRef:
     kind: GitRepository
     name: instavote-deploy
