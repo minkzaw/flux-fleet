@@ -8,4 +8,6 @@ spec:
   interval: 1m0s
   ref:
     branch: main
+  secretRef:
+    name: github-token
   url: https://github.com/minkzaw/instavote-deploy.git
