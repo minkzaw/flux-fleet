@@ -6,7 +6,8 @@ metadata:
   namespace: instavote
 spec:
   interval: 1m0s
-  secretRef: instavote-deploy-git
+  secretRef: 
+    name: instavote-deploy-git
   ref:
     branch: main
   url: https://github.com/minkzaw/instavote-deploy.git
