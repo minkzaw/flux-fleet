@@ -9,23 +9,24 @@ spec:
     address: http://flagger-prometheus:9090
   query: |
     (
-      sum(
-        rate(
-          nginx_ingress_controller_requests{
-            namespace="{{ namespace }}",
-            ingress="{{ ingress }}",
-            status=~"5.."
-          }[{{ interval }}]
+      (
+        sum(
+          rate(
+            nginx_ingress_controller_requests{
+              namespace="{{ namespace }}",
+              ingress="{{ ingress }}",
+              status=~"5.."
+            }[{{ interval }}]
+          )
         )
-      )
-      /
-      on() group_left()
-      sum(
-        rate(
-          nginx_ingress_controller_requests{
-            namespace="{{ namespace }}",
-            ingress="{{ ingress }}"
-          }[{{ interval }}]
+        /
+        sum(
+          rate(
+            nginx_ingress_controller_requests{
+              namespace="{{ namespace }}",
+              ingress="{{ ingress }}"
+            }[{{ interval }}]
+          )
         )
       ) > 0
     ) * 100
