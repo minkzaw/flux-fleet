@@ -2,13 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: metallb-system
 resources:
-  - metallb-manifest.yaml
-  - lab-pool.yaml
-  - lab-pool-adv.yaml
+  - ../../base
+namePrefix: dev-
 configMapGenerator:
   - name: metallb-config
+    behavior: replace
     envs:
-      - metallb-pool.properties 
+      - metallb-pool.properties
     options:
       disableNameSuffixHash: true
 replacements:
@@ -19,7 +19,7 @@ replacements:
     targets:
       - select:
           kind: IPAddressPool
-          name: lab-pool
+          name: example-pool
         fieldPaths:
           - metadata.name
   - source:
@@ -29,9 +29,9 @@ replacements:
     targets:
       - select:
           kind: IPAddressPool
-          name: lab-pool
+          name: example-pool
         fieldPaths:
-          - spec.address.0
+          - spec.addresses.0
   - source:
       kind: ConfigMap
       name: metallb-config
@@ -39,6 +39,16 @@ replacements:
     targets:
       - select:
           kind: L2Advertisement
-          name: lab-pool-adv
+          name: example-pool-adv
         fieldPaths:
           - metadata.name
+  - source:
+      kind: ConfigMap
+      name: metallb-config
+      fieldPath: data.POOL_NAME
+    targets:
+      - select:
+          kind: L2Advertisement
+          name: example-pool-adv
+        fieldPaths:
+          - spec.ipAddressPools.0

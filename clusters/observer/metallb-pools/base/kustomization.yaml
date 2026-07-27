@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
   - lab-pool.yaml
   - lab-pool-adv.yaml
+configMapGenerator:
+  - name: metallb-config
+    envs:
+      - metallb-pool.properties
+    options:
+      disableNameSuffixHash: true
