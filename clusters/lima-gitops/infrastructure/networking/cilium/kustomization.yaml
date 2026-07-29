@@ -4,3 +4,4 @@ namespace: cilium-system
 resources:
   - cilium-system-ns.yaml
   - cilium-helm-repo.yaml
+  - cilium-helm-release.yaml
