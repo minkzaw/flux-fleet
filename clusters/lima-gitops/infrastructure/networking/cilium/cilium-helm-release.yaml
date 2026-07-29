@@ -11,5 +11,5 @@ spec:
     kubeProxyReplacement: true
     l2announcements:
       enabled: true
-    k8sServiceHost: kubernetes.default.svc
+    k8sServiceHost: "10.96.0.1"
     k8sServicePort: 443
