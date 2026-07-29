@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: ./infrastructure/networking/cilium
+  path: ./clusters/lima-gitops/infrastructure/networking/cilium
   prune: true
   sourceRef:
     kind: GitRepository
