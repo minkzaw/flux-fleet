@@ -4,7 +4,5 @@ metadata:
   name: cilium-oci
 spec:
   interval: 5m0s
-  provider: generic
-  ref:
-    tag: v1.15.2
+  type: "oci"
   url: oci://quay.io/cilium/charts/cilium
