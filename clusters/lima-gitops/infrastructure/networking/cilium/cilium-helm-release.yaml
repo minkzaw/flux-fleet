@@ -4,14 +4,9 @@ metadata:
   name: cilium
 spec:
   interval: 10m
-  chart:
-    spec:
-      chart: cilium
-      version: '1.19.6'
-      sourceRef:
-        kind: HelmRepository
-        name: cilium
-      interval: 10m
+  chartRef:
+    kind: OCIRepository
+    name: cilium-oci
   values:
     kubeProxyReplacement: true
     l2announcements:
