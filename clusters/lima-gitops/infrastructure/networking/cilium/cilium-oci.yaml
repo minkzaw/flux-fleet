@@ -6,5 +6,5 @@ spec:
   interval: 5m0s
   provider: generic
   ref:
-    tag: latest
+    tag: v1.15.2
   url: oci://quay.io/cilium/charts/cilium
