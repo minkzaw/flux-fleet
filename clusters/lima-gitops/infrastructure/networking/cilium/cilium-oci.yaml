@@ -2,7 +2,9 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: OCIRepository
 metadata:
   name: cilium-oci
-  namespace: flux-system
 spec:
-  interval: 5m
+  interval: 5m0s
+  provider: generic
+  ref:
+    tag: latest
   url: oci://quay.io/cilium/charts/cilium
