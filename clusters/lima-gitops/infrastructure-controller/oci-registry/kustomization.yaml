@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: zot-system
+resources:
+  - zot-system-ns.yaml
+  - zot-helm-repo.yaml
+  - zot-release.yaml
