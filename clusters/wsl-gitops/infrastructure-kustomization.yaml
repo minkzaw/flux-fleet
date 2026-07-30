@@ -8,5 +8,5 @@ spec:
   path: "./clusters/wsl-gitops/infrastructure-controller"
   prune: true
   sourceRef:
-    kind: GitRepository      
-    name: flux-system       
+    kind: GitRepository
+    name: flux-system
