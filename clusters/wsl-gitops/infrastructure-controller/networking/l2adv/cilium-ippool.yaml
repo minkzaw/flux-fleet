@@ -1,0 +1,8 @@
+apiVersion: cilium.io/v2
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: l2-pool
+spec:
+  blocks:
+    - start: "10.4.1.240"
+      stop: "10.4.1.245"
