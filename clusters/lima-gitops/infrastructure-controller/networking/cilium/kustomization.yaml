@@ -3,5 +3,5 @@ kind: Kustomization
 namespace: cilium-system
 resources:
   - cilium-system-ns.yaml
-  - cilium-oci.yaml
-  - cilium-helm-release.yaml
+  - cilium-oci-helm-repo.yaml
+  - cilium-release.yaml
