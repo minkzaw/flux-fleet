@@ -7,7 +7,7 @@ spec:
   bootstrap:
     initdb:
       database: cnpg
-      owner: cnpg
+      owner: cnpg-user
       secret:
         name: cnpg-systemdb-secret
   storage:
