@@ -9,6 +9,6 @@ spec:
       database: cnpg
       owner: cnpg
       secret:
-        name: cnpg-secret
+        name: cnpg-systemdb-secret
   storage:
     size: 3Gi
