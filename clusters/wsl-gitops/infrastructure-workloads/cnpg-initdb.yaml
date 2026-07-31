@@ -1,0 +1,14 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: cluster-internal-initdb
+spec:
+  instances: 1
+  bootstrap:
+    initdb:
+      database: cnpg
+      owner: cnpg
+      secret:
+        name: cnpg-secret
+  storage:
+    size: 3Gi
