@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: "./clusters/lima-gitops/infrastructure-controller/networking"
+  path: "./clusters/wsl-gitops/infrastructure-controller/networking"
   prune: true
   sourceRef:
     kind: GitRepository

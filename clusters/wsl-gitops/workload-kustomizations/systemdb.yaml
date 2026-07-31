@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: "./clusters/lima-gitops/workload-kustomizations/systemdb.yaml"
+  path: "./clusters/wsl-gitops/workload-kustomizations/systemdb.yaml"
   prune: true
   sourceRef:
     kind: GitRepository
