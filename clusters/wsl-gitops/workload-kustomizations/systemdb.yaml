@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: "./clusters/wsl-gitops/infrastructure-workloads/database"
+  path: "./clusters/wsl-gitops/infrastructure-workloads/systemdb"
   prune: true
   sourceRef:
     kind: GitRepository
