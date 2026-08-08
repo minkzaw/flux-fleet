@@ -1,0 +1,12 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infrastructure-cnpg
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: "./clusters/wsl/infrastructure-controller/cnpg"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
